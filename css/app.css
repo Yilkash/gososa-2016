@@ -13,9 +13,10 @@ body{background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-
 .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:12px}
 .step h2{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--heading);margin-bottom:12px}
 
-.designs{display:flex;gap:14px}
-.design{width:76px;border:0;background:none;padding:0;cursor:pointer;font:inherit;font-size:13px;font-weight:600;color:var(--muted);text-align:center}
-.design img{display:block;width:76px;height:95px;object-fit:cover;object-position:top;border-radius:6px;margin-bottom:6px;background:#eee;outline:1px solid var(--line);outline-offset:0}
+/* designs share the full width equally; adding one more makes them all a bit smaller */
+.designs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:12px}
+.design{width:100%;border:0;background:none;padding:0;cursor:pointer;font:inherit;font-size:13px;font-weight:600;color:var(--muted);text-align:center}
+.design img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:6px;margin-bottom:6px;background:#eee;outline:1px solid var(--line);outline-offset:0}
 .design[aria-pressed="true"]{color:var(--heading)}
 .design[aria-pressed="true"] img{outline:2px solid var(--green);outline-offset:2px}
 
