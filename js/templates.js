@@ -21,6 +21,29 @@ const barcode = (() => {
 
 export const TEMPLATES = [
   {
+    id: 'bold',
+    label: 'Bold',
+    width: 1080,
+    height: 1350,
+    photoTop: 0.25,
+    html: `
+      <div class="t-bold">
+        <div class="ph"></div>
+        <div class="lines"></div>
+        <div class="grab photo"></div>
+        <div class="spine"></div>
+        <div class="mast">GOSOSA</div>
+        <div class="top"><div class="org"><img src="img/logo.png" alt="">Set 2016</div><span>Vol. 10 · Nov 2026</span></div>
+        <div class="tag">I WILL BE PRESENT</div>
+        <div class="name" data-name data-fit="780"></div>
+        <div class="sub">The Class of 2016 is <em>coming home</em></div>
+        <div class="base">
+          <div class="date"><small>10th Anniversary Reunion</small>20–22.11.2026</div>
+          <div class="barcode">${barcode}<div>GOSOSA 2016</div></div>
+        </div>
+      </div>`,
+  },
+  {
     id: 'gold',
     label: 'Gold',
     width: 1080,
@@ -104,29 +127,6 @@ export const TEMPLATES = [
           <div><small>Celebrating</small><strong>10 years since <em>2016</em></strong></div>
         </div>
         <div class="stripe" style="bottom:0"><i></i><i></i><i></i><i></i></div>
-      </div>`,
-  },
-  {
-    id: 'bold',
-    label: 'Bold',
-    width: 1080,
-    height: 1350,
-    photoTop: 0.25,
-    html: `
-      <div class="t-bold">
-        <div class="ph"></div>
-        <div class="lines"></div>
-        <div class="grab photo"></div>
-        <div class="spine"></div>
-        <div class="mast">GOSOSA</div>
-        <div class="top"><div class="org"><img src="img/logo.png" alt="">Set 2016</div><span>Vol. 10 · Nov 2026</span></div>
-        <div class="tag">I WILL BE PRESENT</div>
-        <div class="name" data-name data-fit="780"></div>
-        <div class="sub">The Class of 2016 is <em>coming home</em></div>
-        <div class="base">
-          <div class="date"><small>10th Anniversary Reunion</small>20–22.11.2026</div>
-          <div class="barcode">${barcode}<div>GOSOSA 2016</div></div>
-        </div>
       </div>`,
   },
 ];
