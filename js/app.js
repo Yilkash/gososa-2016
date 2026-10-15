@@ -40,10 +40,6 @@ function renderPicker() {
     };
     box.appendChild(b);
   }
-  const soon = document.createElement('div');
-  soon.className = 'design soon';
-  soon.innerHTML = '<img src="img/placeholder.svg" alt="">More soon';
-  box.appendChild(soon);
 }
 
 // ---------- flyer ----------
@@ -106,7 +102,9 @@ window.addEventListener('resize', fitStage);
 const pointers = new Map();
 let pinchStart = null;
 
+// Only the photo area moves the photo; touching anywhere else scrolls the page as normal.
 stage.addEventListener('pointerdown', (e) => {
+  if (!e.target.closest('.frame, .photo')) return;
   stage.setPointerCapture(e.pointerId);
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   if (pointers.size === 2) pinchStart = { d: pinchDist(), zoom: state.zoom };
@@ -129,12 +127,6 @@ stage.addEventListener('pointermove', (e) => {
 const endPointer = (e) => { pointers.delete(e.pointerId); if (pointers.size < 2) pinchStart = null; };
 stage.addEventListener('pointerup', endPointer);
 stage.addEventListener('pointercancel', endPointer);
-stage.addEventListener('wheel', (e) => {
-  e.preventDefault();
-  state.zoom = Math.min(3, Math.max(1, state.zoom * (e.deltaY < 0 ? 1.06 : 0.94)));
-  $('zoom').value = state.zoom;
-  layoutPhoto();
-}, { passive: false });
 
 function pinchDist() {
   const [a, b] = [...pointers.values()];
@@ -215,8 +207,8 @@ async function withBusy(btn, label, fn) {
 }
 
 function checkReady() {
-  if (state.photo === PLACEHOLDER) { status('Add your photo first (step 2).'); return false; }
-  if (!state.name.trim()) { status('Type your name first (step 3).'); $('name').focus(); return false; }
+  if (state.photo === PLACEHOLDER) { status('Add your photo first.'); return false; }
+  if (!state.name.trim()) { status('Type your name first.'); $('name').focus(); return false; }
   return true;
 }
 
@@ -229,7 +221,7 @@ $('download').addEventListener('click', () => {
     a.download = file.name;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 30000);
-    status('Done! Check your downloads or gallery. 🎉');
+    status('Saved. Check your downloads or gallery.');
   });
 });
 
