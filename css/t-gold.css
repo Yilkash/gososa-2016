@@ -20,9 +20,8 @@
 .t-gold .set i:last-child,.t-gold .date i:last-child{transform:scaleX(-1)}
 .t-gold .anniv{position:absolute;right:56px;top:52px;width:220px;text-align:center}
 .t-gold .ten-wrap{position:relative;display:inline-block}
-.t-gold .ten{font-family:'Playfair Display',serif;font-weight:900;font-size:150px;line-height:.9;letter-spacing:-4px;
-  background:linear-gradient(180deg,#fff2b8 0%,#e0b84a 35%,#9c7419 70%,#e8c86a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 1px rgba(80,55,0,.4))}
-.t-gold .years{position:absolute;right:-18px;top:-10px;font-family:'Playfair Display',serif;font-style:italic;font-weight:800;font-size:34px;color:#8a6b1c}
+.t-gold .ten{display:block;margin:-8px auto -6px}
+.t-gold .years{position:absolute;right:-18px;top:-10px;font-family:'Playfair Display',serif;font-style:italic;font-weight:800;font-size:34px;color:#6e4f0c}
 .t-gold .ann{font-family:'Cinzel',serif;font-weight:700;font-size:25px;letter-spacing:2px;color:#4a3a10;margin-top:2px}
 .t-gold .ann-line{width:150px;height:2px;margin:6px auto 0;background:linear-gradient(90deg,transparent,#8a6b1c,transparent)}
 .t-gold .vline{position:absolute;top:330px;width:3px;height:300px;background:linear-gradient(180deg,transparent,#a88a33,transparent)}

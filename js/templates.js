@@ -33,7 +33,14 @@ export const TEMPLATES = [
           <div class="set"><i></i>SET 2016<i></i></div>
         </div>
         <div class="anniv">
-          <div class="ten-wrap"><div class="ten">10</div><div class="years">Years</div></div>
+          <div class="ten-wrap">
+            <svg class="ten" viewBox="0 0 230 140" width="230" height="140">
+              <defs><linearGradient id="ten-g" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fff1b0"/><stop offset=".38" stop-color="#e2b847"/><stop offset=".7" stop-color="#9a7014"/><stop offset="1" stop-color="#e9c565"/></linearGradient></defs>
+              <text x="115" y="127" text-anchor="middle" font-family="Playfair Display" font-weight="900" font-size="150" letter-spacing="-4" fill="#4a3305" opacity=".35">10</text>
+              <text x="115" y="124" text-anchor="middle" font-family="Playfair Display" font-weight="900" font-size="150" letter-spacing="-4" fill="url(#ten-g)" stroke="#6e4f0c" stroke-width="1.6" paint-order="stroke">10</text>
+            </svg>
+            <div class="years">Years</div></div>
           <div class="ann">ANNIVERSARY</div><div class="ann-line"></div>
         </div>
         <div class="vline" style="left:262px"></div><div class="vline" style="right:262px"></div>
