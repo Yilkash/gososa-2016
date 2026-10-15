@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GOSOSA Set 2016 Flyer</title>
 <meta name="description" content="Make your 'I will be present' flyer for the GOSOSA Set 2016 10th anniversary reunion, 20–22 November 2026.">
-<meta name="theme-color" content="#0b1a13">
+<meta name="theme-color" content="#0f2a1e">
 <link rel="icon" href="img/logo.png">
 <meta property="og:title" content="GOSOSA Set 2016 · Make your flyer">
 <meta property="og:description" content="Upload your photo, type your name, download your 'I will be present' flyer. 20–22 November 2026.">
@@ -18,58 +18,58 @@
 <link rel="stylesheet" href="css/t-navy.css">
 </head>
 <body>
-<header class="bar">
-  <a class="brand" href="./">
-    <img src="img/logo.png" alt="" width="34" height="34">
-    <span>GOSOSA <em>Set 2016</em></span>
-  </a>
-  <span class="when">20–22 Nov 2026</span>
+<header class="top">
+  <img src="img/logo.png" alt="GOSOSA logo" width="56" height="56">
+  <div>
+    <h1>GOSOSA Set 2016</h1>
+    <p>10th Anniversary · 20–22 November 2026</p>
+  </div>
 </header>
 
 <main class="layout">
-  <section class="preview">
-    <div class="stage" id="stage"><div class="scaler" id="scaler"></div></div>
-    <div class="adjust" id="adjust" hidden>
-      <span>Drag to move</span>
-      <label class="zoom"><span>Zoom</span><input type="range" id="zoom" min="1" max="3" step="0.01" value="1"></label>
-      <button class="text-btn" id="reset" type="button">Reset</button>
-    </div>
-  </section>
+  <section class="controls">
+    <p class="intro">Make your <b>“I will be present”</b> flyer in one minute.</p>
 
-  <section class="panel">
-    <p class="eyebrow">10th anniversary reunion</p>
-    <h1>Ten years on.<br>Let them know you'll be there.</h1>
-
-    <div class="field">
-      <span class="label">Design</span>
+    <div class="step">
+      <h2><span>1</span> Pick a design</h2>
       <div class="designs" id="designs"></div>
     </div>
 
-    <div class="field">
-      <span class="label">Photo</span>
-      <label class="upload">
+    <div class="step">
+      <h2><span>2</span> Add your photo</h2>
+      <label class="btn btn-photo">
         <input type="file" id="photo" accept="image/*" hidden>
-        <span id="photo-label">Upload a photo</span>
-        <small>Waist up, facing the camera works best</small>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M9 3 7.2 5H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.2L15 3H9zm3 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+        <span id="photo-label">Choose photo</span>
       </label>
+      <p class="hint">Tip: a clear photo from the waist up looks best.</p>
     </div>
 
-    <div class="field">
-      <label class="label" for="name">Name on the flyer</label>
-      <input type="text" id="name" maxlength="32" placeholder="Your full name" autocomplete="name">
+    <div class="step">
+      <h2><span>3</span> Type your name</h2>
+      <input type="text" id="name" maxlength="32" placeholder="e.g. Dimka Yilrit" autocomplete="name">
     </div>
+  </section>
 
+  <section class="preview">
+    <div class="stage" id="stage"><div class="scaler" id="scaler"></div></div>
+    <div class="adjust" id="adjust" hidden>
+      <span class="hint">Drag the photo to move it</span>
+      <label class="zoom">Zoom <input type="range" id="zoom" min="1" max="3" step="0.01" value="1"></label>
+      <button class="link" id="reset" type="button">Reset</button>
+    </div>
     <div class="actions">
-      <button class="btn primary" id="download" type="button">Download flyer</button>
-      <button class="btn ghost" id="share" type="button" hidden>Share to WhatsApp</button>
+      <button class="btn btn-main" id="download" type="button">Download flyer</button>
+      <button class="btn btn-wa" id="share" type="button" hidden>Share to WhatsApp</button>
     </div>
     <p class="status" id="status" role="status"></p>
-
-    <p class="note">Your photo is processed on your device and is never uploaded.</p>
   </section>
 </main>
 
-<footer class="foot">Good Shepherd Old Students' Association · Arise and Shine</footer>
+<footer class="foot">
+  <p>🔒 Your photo stays on your phone. Nothing is uploaded.</p>
+  <p>Good Shepherd Old Students' Association · Arise and Shine</p>
+</footer>
 
 <script src="vendor/html-to-image.js"></script>
 <script type="module" src="js/app.js"></script>

@@ -40,6 +40,10 @@ function renderPicker() {
     };
     box.appendChild(b);
   }
+  const soon = document.createElement('div');
+  soon.className = 'design soon';
+  soon.innerHTML = '<img src="img/placeholder.svg" alt="">More soon';
+  box.appendChild(soon);
 }
 
 // ---------- flyer ----------
@@ -211,8 +215,8 @@ async function withBusy(btn, label, fn) {
 }
 
 function checkReady() {
-  if (state.photo === PLACEHOLDER) { status('Add your photo first.'); return false; }
-  if (!state.name.trim()) { status('Type your name first.'); $('name').focus(); return false; }
+  if (state.photo === PLACEHOLDER) { status('Add your photo first (step 2).'); return false; }
+  if (!state.name.trim()) { status('Type your name first (step 3).'); $('name').focus(); return false; }
   return true;
 }
 
@@ -225,7 +229,7 @@ $('download').addEventListener('click', () => {
     a.download = file.name;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 30000);
-    status('Saved. Check your downloads or gallery.');
+    status('Done! Check your downloads or gallery. 🎉');
   });
 });
 
