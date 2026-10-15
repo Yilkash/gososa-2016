@@ -1,0 +1,27 @@
+/* Comic design: the photo is redrawn in black ink + halftone dots on yellow paper. 1080 x 1350 */
+.t-comic{--paper:#ffd23f;--ink:#111114;--red:#e03a2f;--blue:#1d4fa8;--white:#fffdf5;
+  position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:'Bangers',cursive;font-weight:400}
+.t-comic .ph{position:absolute;left:0;right:0;top:250px;bottom:262px;overflow:hidden;background:var(--paper)}
+.t-comic .grab{position:absolute;left:0;right:0;top:420px;height:500px}
+.t-comic .border{position:absolute;inset:22px;border:10px solid var(--ink);pointer-events:none}
+/* masthead */
+.t-comic .mast{position:absolute;left:170px;right:250px;top:44px;text-align:center;font-size:215px;line-height:1;letter-spacing:6px;color:var(--ink)}
+.t-comic .mast span{color:var(--white);-webkit-text-stroke:8px var(--ink);paint-order:stroke;text-shadow:12px 12px 0 var(--red)}
+.t-comic .set{position:absolute;right:56px;top:52px;background:var(--red);color:var(--white);font-size:44px;letter-spacing:3px;padding:6px 18px 2px;
+  border:6px solid var(--ink);transform:rotate(6deg);box-shadow:6px 6px 0 var(--ink)}
+.t-comic .logo{position:absolute;left:52px;top:56px;width:104px;height:104px;border-radius:50%;background:#fff;padding:3px;border:6px solid var(--ink)}
+/* caption box */
+.t-comic .caption{position:absolute;left:52px;top:300px;background:var(--white);border:6px solid var(--ink);padding:12px 20px 8px;
+  font-size:40px;letter-spacing:2px;line-height:1;box-shadow:8px 8px 0 var(--ink)}
+/* burst */
+.t-comic .burst{position:absolute;left:44px;top:440px;width:250px;height:250px}
+.t-comic .burst b{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-weight:400;font-size:52px;line-height:.9;color:var(--white);
+  -webkit-text-stroke:3px var(--ink);paint-order:stroke;transform:rotate(-10deg)}
+/* speech bubble */
+.t-comic .bubble{position:absolute;right:56px;top:330px;width:400px;height:200px}
+.t-comic .bubble b{position:absolute;left:0;right:0;top:40px;text-align:center;font-weight:400;font-size:66px;line-height:.95;letter-spacing:2px;transform:rotate(-3deg)}
+/* name band */
+.t-comic .band{position:absolute;left:22px;right:22px;bottom:22px;height:250px;background:var(--ink);color:var(--paper);padding:26px 40px 0}
+.t-comic .band small{display:block;font-size:34px;letter-spacing:4px;color:var(--white)}
+.t-comic .band .name{font-size:130px;line-height:1;letter-spacing:3px;white-space:nowrap;margin-top:2px}
+.t-comic .band .date{position:absolute;right:40px;top:30px;background:var(--red);color:var(--white);font-size:34px;letter-spacing:2px;padding:4px 14px 0;transform:rotate(-3deg)}

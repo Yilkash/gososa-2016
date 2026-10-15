@@ -1,4 +1,5 @@
 import { TEMPLATES } from './templates.js';
+import { inkPrint } from './comic.js';
 
 const $ = (id) => document.getElementById(id);
 const stage = $('stage');
@@ -51,11 +52,37 @@ function renderFlyer() {
   const img = new Image();
   img.alt = '';
   img.draggable = false;
-  img.src = state.photo.src;
+  img.src = photoFor(t);
   flyerNode().querySelector('.ph').appendChild(img);
   setName();
   layoutPhoto();
   fitStage();
+  if (t.ink && state.photo !== PLACEHOLDER && state.ink?.from !== state.photo.src) drawInk();
+}
+
+// Comic designs use the photo redrawn in ink (made once per photo, on the phone).
+function photoFor(t) {
+  if (t.ink && state.photo !== PLACEHOLDER && state.ink?.from === state.photo.src) return state.ink.src;
+  return state.photo.src;
+}
+
+let inkJob = null;
+async function drawInk() {
+  const from = state.photo.src;
+  if (inkJob === from) return;
+  inkJob = from;
+  status('Drawing your comic…');
+  try {
+    const r = await inkPrint(from);
+    if (state.photo.src !== from) return;
+    state.ink = { from, src: r.src };
+    status('');
+    if (state.tpl.ink) renderFlyer();
+  } catch {
+    status('Could not draw the comic. Try another photo.');
+  } finally {
+    inkJob = null;
+  }
 }
 
 // Shrink long names until the text fits the width the design allows (data-fit, in design pixels).
@@ -70,7 +97,8 @@ function setName() {
   const width = () => {
     measure.font = `${cs.fontStyle} ${cs.fontWeight} ${size}px ${cs.fontFamily}`;
     const text = cs.textTransform === 'uppercase' ? el.textContent.toUpperCase() : el.textContent;
-    return measure.measureText(text).width;
+    const spacing = (parseFloat(cs.letterSpacing) || 0) * text.length;
+    return measure.measureText(text).width + spacing;
   };
   while (width() > fit && size > 16) size -= 1;
   el.style.fontSize = size + 'px';
@@ -81,7 +109,7 @@ function layoutPhoto() {
   const img = ph.querySelector('img');
   const cw = ph.clientWidth, ch = ph.clientHeight;
   const { w: iw, h: ih } = state.photo;
-  const s = Math.max(cw / iw, ch / ih) * state.zoom;
+  const s = Math.max(cw / iw, ch / ih) * state.zoom * (state.tpl.zoom || 1);
   const w = iw * s, h = ih * s;
   const left0 = (cw - w) / 2, top0 = (ch - h) * state.tpl.photoTop;
   const left = Math.min(0, Math.max(cw - w, left0 + state.dx));
