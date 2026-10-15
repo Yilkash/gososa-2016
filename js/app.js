@@ -16,10 +16,19 @@ const state = {
   dy: 0,
 };
 
+// Saved under "gososa." because Abide and Mai Kosai share this yilkash.github.io storage.
 const store = {
-  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
-  set(k, v) { try { localStorage.setItem(k, v); } catch { /* private mode */ } },
+  get(k) { try { return localStorage.getItem('gososa.' + k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem('gososa.' + k, v); } catch { /* private mode */ } },
 };
+// Move values saved by the first version (plain "name" / "design") to the new labels.
+try {
+  for (const k of ['name', 'design']) {
+    const old = localStorage.getItem(k);
+    if (old !== null && localStorage.getItem('gososa.' + k) === null) localStorage.setItem('gososa.' + k, old);
+    localStorage.removeItem(k);
+  }
+} catch { /* private mode */ }
 
 // ---------- design picker ----------
 function renderPicker() {
