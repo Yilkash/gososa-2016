@@ -199,12 +199,12 @@ async function makeImage() {
 }
 
 async function withBusy(btn, label, fn) {
-  const old = btn.textContent;
+  const old = btn.innerHTML;
   btn.disabled = true; btn.textContent = label;
   try { await fn(); } catch (err) {
     console.error(err);
     status('Something went wrong. Please try again.');
-  } finally { btn.disabled = false; btn.textContent = old; }
+  } finally { btn.disabled = false; btn.innerHTML = old; }
 }
 
 function checkReady() {
