@@ -10,6 +10,15 @@ const goldRibbon = `
     <path d="M0 -50 Q 300 44 1000 88 L1000 92 Q 300 50 0 -44Z" fill="#f6e7a6"/>
   </svg>`;
 
+
+// Barcode stripes for the cover design (decoration only).
+const barcode = (() => {
+  const widths = [3,1,2,1,1,3,2,1,1,2,3,1,1,1,2,2,1,3,1,2,1,1,2,3,1,2,1,1,3,1,2,2,1,1,3,1,2,1,2,1];
+  let x = 0, out = '';
+  widths.forEach((w, i) => { if (i % 2 === 0) out += `<rect x="${x}" y="0" width="${w * 2}" height="70"/>`; x += w * 2 + 1; });
+  return `<svg viewBox="0 0 ${x} 70" width="${x}" height="70" fill="#111">${out}</svg>`;
+})();
+
 export const TEMPLATES = [
   {
     id: 'gold',
@@ -95,6 +104,29 @@ export const TEMPLATES = [
           <div><small>Celebrating</small><strong>10 years since <em>2016</em></strong></div>
         </div>
         <div class="stripe" style="bottom:0"><i></i><i></i><i></i><i></i></div>
+      </div>`,
+  },
+  {
+    id: 'bold',
+    label: 'Bold',
+    width: 1080,
+    height: 1350,
+    photoTop: 0.25,
+    html: `
+      <div class="t-bold">
+        <div class="ph"></div>
+        <div class="lines"></div>
+        <div class="grab photo"></div>
+        <div class="spine"></div>
+        <div class="mast">GOSOSA</div>
+        <div class="top"><div class="org"><img src="img/logo.png" alt="">Set 2016</div><span>Vol. 10 · Nov 2026</span></div>
+        <div class="tag">I WILL BE PRESENT</div>
+        <div class="name" data-name data-fit="780"></div>
+        <div class="sub">The Class of 2016 is <em>coming home</em></div>
+        <div class="base">
+          <div class="date"><small>10th Anniversary Reunion</small>20–22.11.2026</div>
+          <div class="barcode">${barcode}<div>GOSOSA 2016</div></div>
+        </div>
       </div>`,
   },
 ];

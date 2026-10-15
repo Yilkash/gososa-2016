@@ -69,7 +69,8 @@ function setName() {
   let size = parseFloat(cs.fontSize);
   const width = () => {
     measure.font = `${cs.fontStyle} ${cs.fontWeight} ${size}px ${cs.fontFamily}`;
-    return measure.measureText(el.textContent).width;
+    const text = cs.textTransform === 'uppercase' ? el.textContent.toUpperCase() : el.textContent;
+    return measure.measureText(text).width;
   };
   while (width() > fit && size > 16) size -= 1;
   el.style.fontSize = size + 'px';
