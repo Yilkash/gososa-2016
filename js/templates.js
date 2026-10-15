@@ -44,40 +44,6 @@ export const TEMPLATES = [
       </div>`,
   },
   {
-    id: 'comic',
-    label: 'Comic',
-    width: 1080,
-    height: 1350,
-    photoTop: 0.32,
-    zoom: 1.3,
-    ink: true,
-    html: `
-      <div class="t-comic">
-        <div class="ph"></div>
-        <div class="grab photo"></div>
-        <img class="logo" src="img/logo.png" alt="">
-        <div class="mast"><span>GOSOSA</span></div>
-        <div class="set">SET 2016</div>
-        <div class="caption">MEANWHILE, 10 YEARS LATER...</div>
-        <svg class="burst" viewBox="0 0 250 250">
-          <polygon fill="#e03a2f" stroke="#111114" stroke-width="7" stroke-linejoin="round"
-            points="125,8 148,70 205,30 185,95 245,105 192,140 232,195 168,180 160,242 125,195 90,242 82,180 18,195 58,140 5,105 65,95 45,30 102,70"/>
-        </svg>
-        <div class="burst"><b>10<br>YEARS!</b></div>
-        <svg class="bubble" viewBox="0 0 400 200">
-          <path d="M200 10 C 310 10 390 45 390 92 C 390 140 310 172 200 172 C 175 172 150 170 128 165 L 60 196 L 88 152 C 38 136 10 115 10 92 C 10 45 90 10 200 10 Z"
-            fill="#fffdf5" stroke="#111114" stroke-width="7" stroke-linejoin="round"/>
-        </svg>
-        <div class="bubble"><b>I'LL BE THERE!</b></div>
-        <div class="band">
-          <small>CLASS OF 2016 · REUNION</small>
-          <div class="name" data-name data-fit="940"></div>
-          <div class="date">20–22 NOV 2026</div>
-        </div>
-        <div class="border"></div>
-      </div>`,
-  },
-  {
     id: 'gold',
     label: 'Gold',
     width: 1080,
@@ -161,6 +127,40 @@ export const TEMPLATES = [
           <div><small>Celebrating</small><strong>10 years since <em>2016</em></strong></div>
         </div>
         <div class="stripe" style="bottom:0"><i></i><i></i><i></i><i></i></div>
+      </div>`,
+  },
+  {
+    id: 'comic',
+    label: 'Comic',
+    width: 1080,
+    height: 1350,
+    photoTop: 0.32,
+    zoom: 1.3,
+    ink: true,
+    html: `
+      <div class="t-comic">
+        <div class="ph"></div>
+        <div class="grab photo"></div>
+        <img class="logo" src="img/logo.png" alt="">
+        <div class="mast"><span>GOSOSA</span></div>
+        <div class="set">SET 2016</div>
+        <div class="caption">MEANWHILE, 10 YEARS LATER...</div>
+        <svg class="burst" viewBox="0 0 250 250">
+          <polygon fill="#e03a2f" stroke="#111114" stroke-width="7" stroke-linejoin="round"
+            points="125,8 148,70 205,30 185,95 245,105 192,140 232,195 168,180 160,242 125,195 90,242 82,180 18,195 58,140 5,105 65,95 45,30 102,70"/>
+        </svg>
+        <div class="burst"><b>10<br>YEARS!</b></div>
+        <svg class="bubble" viewBox="0 0 400 200">
+          <path d="M200 10 C 310 10 390 45 390 92 C 390 140 310 172 200 172 C 175 172 150 170 128 165 L 60 196 L 88 152 C 38 136 10 115 10 92 C 10 45 90 10 200 10 Z"
+            fill="#fffdf5" stroke="#111114" stroke-width="7" stroke-linejoin="round"/>
+        </svg>
+        <div class="bubble"><b>I'LL BE THERE!</b></div>
+        <div class="band">
+          <small>CLASS OF 2016 · REUNION</small>
+          <div class="name" data-name data-fit="940"></div>
+          <div class="date">20–22 NOV 2026</div>
+        </div>
+        <div class="border"></div>
       </div>`,
   },
 ];
