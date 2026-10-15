@@ -251,6 +251,7 @@ $('download').addEventListener('click', () => {
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 30000);
     status('Saved. Check your downloads or gallery.');
+    track('download');
   });
 });
 
@@ -266,6 +267,7 @@ $('share').addEventListener('click', () => {
     try {
       await navigator.share({ files: [file], text: 'I will be present! GOSOSA Set 2016 · 20–22 Nov 2026' });
       status('');
+      track('share');
     } catch (err) {
       if (err.name !== 'AbortError') throw err;
     }
@@ -273,6 +275,13 @@ $('share').addEventListener('click', () => {
 });
 
 function status(msg) { $('status').textContent = msg; }
+
+// Count downloads and shares per design on the GoatCounter dashboard (only the action and design, nothing personal).
+function track(action) {
+  try {
+    window.goatcounter?.count?.({ path: `${action}-${state.tpl.id}`, title: `${action} · ${state.tpl.label}`, event: true });
+  } catch { /* counting must never break the page */ }
+}
 
 // ---------- start ----------
 state.name = store.get('name') || '';
