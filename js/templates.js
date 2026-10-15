@@ -1,0 +1,93 @@
+// Each design: size, markup, and how far the photo starts from the top (0 = top, 1 = bottom).
+// The app fills [data-name] with the person's name and puts their photo inside .ph.
+
+const goldRibbon = `
+  <svg class="ribbon" viewBox="0 0 1000 140" preserveAspectRatio="none">
+    <path d="M0 20 Q 300 110 1000 135 L1000 140 L0 140Z" fill="#1d4fa8"/>
+    <path d="M0 0 Q 300 90 1000 120 L1000 132 Q 300 102 0 14Z" fill="#1f8f3e"/>
+    <path d="M0 -22 Q 300 70 1000 106 L1000 120 Q 300 86 0 -6Z" fill="#f2c412"/>
+    <path d="M0 -44 Q 300 50 1000 92 L1000 106 Q 300 66 0 -28Z" fill="#d62a1e"/>
+    <path d="M0 -50 Q 300 44 1000 88 L1000 92 Q 300 50 0 -44Z" fill="#f6e7a6"/>
+  </svg>`;
+
+export const TEMPLATES = [
+  {
+    id: 'gold',
+    label: 'Gold',
+    width: 1080,
+    height: 1080,
+    photoTop: 0.25,
+    html: `
+      <div class="t-gold">
+                ${goldRibbon}
+        <div class="tl-g"></div><div class="tl"></div>
+        <div class="br-g"></div><div class="br"></div>
+        <div class="border"></div>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <div class="title">
+          <svg class="cap" viewBox="0 0 100 60"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3dc8a"/><stop offset="1" stop-color="#a88a33"/></linearGradient></defs>
+            <path d="M50 4 L96 22 L50 40 L4 22Z" fill="url(#cg)" stroke="#8a6b1c" stroke-width="2"/>
+            <path d="M24 32 L24 46 Q50 60 76 46 L76 32 L50 42Z" fill="url(#cg)" stroke="#8a6b1c" stroke-width="2"/>
+            <path d="M88 25 L88 46" stroke="#8a6b1c" stroke-width="3"/><circle cx="88" cy="48" r="4" fill="#8a6b1c"/></svg>
+          <div class="word">GOSOSA</div>
+          <div class="set"><i></i>SET 2016<i></i></div>
+        </div>
+        <div class="anniv">
+          <div class="ten-wrap"><div class="ten">10</div><div class="years">Years</div></div>
+          <div class="ann">ANNIVERSARY</div><div class="ann-line"></div>
+        </div>
+        <div class="vline" style="left:262px"></div><div class="vline" style="right:262px"></div>
+        <div class="frame"><div class="in"><div class="ph"></div></div></div>
+        <div class="namebar-g"></div>
+        <div class="namebar"><i></i><span data-name data-fit="430"></span><i></i></div>
+        <div class="present">I Will Be Present</div>
+        <svg class="swoosh" viewBox="0 0 420 30"><path d="M5 22 Q 210 -4 415 12 Q 210 6 5 26Z" fill="#b8932f"/></svg>
+        <div class="date"><i></i>NOVEMBER, 20th – 22nd, 2026<i></i></div>
+      </div>`,
+  },
+  {
+    id: 'navy',
+    label: 'Navy',
+    width: 1080,
+    height: 1350,
+    photoTop: 0.2,
+    html: `
+      <div class="t-navy">
+        <div class="stripe" style="top:0"><i></i><i></i><i></i><i></i></div>
+        <div class="dots"></div>
+        <div class="ghost">2016</div>
+        <div class="head">
+          <img src="img/logo.png" alt="">
+          <div class="org"><b>Good Shepherd College</b><span>Old Students' Association · GOSOSA</span></div>
+          <div class="pill">SET 2016</div>
+        </div>
+        <div class="left">
+          <div class="kicker">GOSOSA · Set 2016</div>
+          <div class="big">10<sup>th</sup></div>
+          <div class="yrs">Anniversary <em>Reunion</em></div>
+          <div class="rule"></div>
+          <p class="blurb">Ten years after we left, the <b>Class of 2016</b> comes home again.<br><b>Arise and Shine.</b></p>
+        </div>
+        <div class="photo">
+          <div class="back"></div>
+          <div class="ph"></div>
+          <div class="shade"></div>
+          <div class="badge">
+            <svg viewBox="0 0 190 190"><defs><path id="badge-circle" d="M95,95 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+              <text font-family="Manrope" font-weight="800" font-size="15" letter-spacing="4.2" fill="#0a1a3f"><textPath href="#badge-circle">GOSOSA · SET 2016 · CLASS REUNION ·</textPath></text></svg>
+            <div class="tick">I'll be<br>there</div>
+          </div>
+        </div>
+        <div class="who">
+          <div class="label">Confirmed attendee</div>
+          <div class="name" data-name data-fit="860"></div>
+          <div class="line">will be present. See you there!</div>
+        </div>
+        <div class="bottom">
+          <div><small>Date</small><strong>20<em>–</em>22 November 2026</strong></div>
+          <div><small>Celebrating</small><strong>10 years since <em>2016</em></strong></div>
+        </div>
+        <div class="stripe" style="bottom:0"><i></i><i></i><i></i><i></i></div>
+      </div>`,
+  },
+];

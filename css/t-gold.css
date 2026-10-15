@@ -1,0 +1,43 @@
+/* Gold design: square 1080 x 1080 */
+.t-gold{--green:#0f2a1e;--gold:#c9a640;--gold-dk:#8a6b1c;
+  position:relative;width:1080px;height:1080px;overflow:hidden;color:var(--green);
+  background:#cdb35a url(../img/bg-gold.jpg) 0 0/1080px 1080px no-repeat}
+.t-gold .border{position:absolute;inset:18px;border:2px solid rgba(138,107,28,.75)}
+.t-gold .tl-g{position:absolute;left:0;top:0;width:190px;height:190px;background:linear-gradient(135deg,#f3dc8a,#a8842b);clip-path:polygon(0 0,100% 0,100% 6%,6% 100%,0 100%)}
+.t-gold .tl{position:absolute;left:0;top:0;width:182px;height:182px;background:var(--green);clip-path:polygon(0 0,100% 0,0 100%)}
+.t-gold .br-g{position:absolute;right:0;bottom:0;width:200px;height:200px;background:linear-gradient(135deg,#f3dc8a,#a8842b);clip-path:polygon(100% 0,100% 100%,0 100%,0 94%,94% 0)}
+.t-gold .br{position:absolute;right:0;bottom:0;width:190px;height:190px;background:var(--green);clip-path:polygon(100% 0,100% 100%,0 100%)}
+.t-gold .ribbon{position:absolute;left:-40px;bottom:-46px;width:1000px;height:140px}
+.t-gold .logo{position:absolute;left:82px;top:78px;width:150px;height:150px;border-radius:50%;background:#fff;
+  box-shadow:0 0 0 4px #fff,0 0 0 6px var(--gold),0 6px 14px rgba(0,0,0,.25);display:grid;place-items:center}
+.t-gold .logo img{width:140px;height:140px}
+.t-gold .title{position:absolute;left:0;right:0;top:48px;text-align:center}
+.t-gold .cap{width:70px;display:block;margin:0 auto -14px;position:relative;left:-6px}
+.t-gold .word{font-family:'Playfair Display',serif;font-weight:900;font-size:118px;line-height:1;letter-spacing:1px}
+.t-gold .set{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:10px;
+  font-family:'Montserrat',sans-serif;font-weight:600;font-size:34px;letter-spacing:7px}
+.t-gold .set i,.t-gold .date i{display:block;width:70px;height:3px;background:linear-gradient(90deg,transparent,var(--gold-dk))}
+.t-gold .set i:last-child,.t-gold .date i:last-child{transform:scaleX(-1)}
+.t-gold .anniv{position:absolute;right:56px;top:52px;width:220px;text-align:center}
+.t-gold .ten-wrap{position:relative;display:inline-block}
+.t-gold .ten{font-family:'Playfair Display',serif;font-weight:900;font-size:150px;line-height:.9;letter-spacing:-4px;
+  background:linear-gradient(180deg,#fff2b8 0%,#e0b84a 35%,#9c7419 70%,#e8c86a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 1px rgba(80,55,0,.4))}
+.t-gold .years{position:absolute;right:-18px;top:-10px;font-family:'Playfair Display',serif;font-style:italic;font-weight:800;font-size:34px;color:#8a6b1c}
+.t-gold .ann{font-family:'Cinzel',serif;font-weight:700;font-size:25px;letter-spacing:2px;color:#4a3a10;margin-top:2px}
+.t-gold .ann-line{width:150px;height:2px;margin:6px auto 0;background:linear-gradient(90deg,transparent,#8a6b1c,transparent)}
+.t-gold .vline{position:absolute;top:330px;width:3px;height:300px;background:linear-gradient(180deg,transparent,#a88a33,transparent)}
+.t-gold .frame{position:absolute;left:310px;top:240px;width:460px;height:478px;background:var(--green);padding:14px;box-shadow:0 10px 25px rgba(60,40,0,.35)}
+.t-gold .frame .in{position:relative;width:100%;height:100%;border:5px solid #d9b95a;background:linear-gradient(135deg,#f5e3a1,#b8932f)}
+.t-gold .frame .in::after{content:"";position:absolute;inset:6px;border:2px solid #f2dd92;pointer-events:none}
+.t-gold .ph{position:absolute;inset:11px;overflow:hidden;background:#ddd}
+.t-gold .namebar-g{position:absolute;left:209px;top:722px;width:662px;height:78px;background:linear-gradient(90deg,#a88a33,#f3dc8a,#a88a33);
+  clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%)}
+.t-gold .namebar{position:absolute;left:215px;top:728px;width:650px;height:66px;background:var(--green);
+  clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);display:flex;align-items:center;justify-content:center;gap:22px}
+.t-gold .namebar span{font-family:'Montserrat',sans-serif;font-style:italic;font-weight:500;font-size:36px;color:#fff;white-space:nowrap;max-width:440px;overflow:hidden;text-align:center}
+.t-gold .namebar i{display:block;flex:none;width:60px;height:2px;background:#d9b95a}
+.t-gold .present{position:absolute;left:0;right:0;top:812px;text-align:center;font-family:'Kaushan Script',cursive;font-weight:400;font-size:96px;transform:rotate(-3deg)}
+.t-gold .swoosh{position:absolute;left:350px;top:930px;width:420px;height:30px}
+.t-gold .date{position:absolute;left:0;right:0;top:975px;display:flex;align-items:center;justify-content:center;gap:22px;
+  font-family:'Montserrat',sans-serif;font-weight:600;font-size:28px;letter-spacing:6px}
+.t-gold .date i{width:80px;height:2px}

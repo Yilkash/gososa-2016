@@ -1,0 +1,48 @@
+/* Navy design: portrait 1080 x 1350 */
+.t-navy{--navy:#0a1a3f;--navy-2:#13295e;--sun:#f5c518;--red:#e03a2f;--leaf:#2fa84f;--sky:#2b6fd6;--ink:#f6f3ea;
+  position:relative;width:1080px;height:1350px;overflow:hidden;color:var(--ink);font-family:'Manrope',sans-serif;
+  background:
+    radial-gradient(circle at 78% 38%, rgba(43,111,214,.45), transparent 46%),
+    radial-gradient(circle at 10% 95%, rgba(245,197,24,.12), transparent 40%),
+    linear-gradient(160deg,var(--navy-2) 0%,var(--navy) 60%,#06112b 100%)}
+.t-navy .dots{position:absolute;left:0;right:0;top:0;height:900px;opacity:.07;
+  background-image:radial-gradient(#fff 1.4px,transparent 1.6px);background-size:28px 28px}
+.t-navy .ghost{position:absolute;left:-30px;bottom:150px;font-family:'DM Serif Display',serif;font-weight:400;font-size:420px;line-height:1;
+  color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.07);letter-spacing:-10px}
+.t-navy .stripe{position:absolute;left:0;right:0;height:10px;display:flex}
+.t-navy .stripe i{flex:1}
+.t-navy .stripe i:nth-child(1){background:var(--sky)}.t-navy .stripe i:nth-child(2){background:var(--sun)}
+.t-navy .stripe i:nth-child(3){background:var(--leaf)}.t-navy .stripe i:nth-child(4){background:var(--red)}
+.t-navy .head{position:absolute;left:70px;right:70px;top:62px;display:flex;align-items:center;gap:22px}
+.t-navy .head img{width:104px;height:104px;border-radius:50%;background:#fff;padding:4px;box-shadow:0 0 0 3px var(--sun)}
+.t-navy .org{flex:1}
+.t-navy .org b{display:block;font-weight:800;font-size:25px;letter-spacing:3px;text-transform:uppercase}
+.t-navy .org span{display:block;margin-top:6px;font-weight:500;font-size:19px;letter-spacing:2px;color:rgba(246,243,234,.7)}
+.t-navy .pill{border:2px solid var(--sun);color:var(--sun);border-radius:40px;padding:12px 26px;font-weight:800;font-size:22px;letter-spacing:4px}
+.t-navy .left{position:absolute;left:70px;top:250px;width:420px}
+.t-navy .kicker{font-weight:700;font-size:20px;letter-spacing:6px;color:var(--sun);text-transform:uppercase}
+.t-navy .big{font-family:'DM Serif Display',serif;font-weight:400;font-size:250px;line-height:.85;margin-top:18px}
+.t-navy .big sup{font-size:70px;vertical-align:top;position:relative;top:24px;color:var(--sun);margin-left:4px}
+.t-navy .yrs{font-family:'DM Serif Display',serif;font-weight:400;font-size:66px;line-height:1;margin-top:6px}
+.t-navy .yrs em{color:var(--sun)}
+.t-navy .rule{width:90px;height:4px;background:var(--red);margin:34px 0 26px}
+.t-navy .blurb{font-size:23px;line-height:1.55;color:rgba(246,243,234,.82);font-weight:500}
+.t-navy .blurb b{color:var(--ink)}
+.t-navy .photo{position:absolute;right:70px;top:230px;width:480px;height:640px}
+.t-navy .photo .back{position:absolute;inset:0;transform:translate(22px,22px);border:3px solid var(--sun);border-radius:240px 240px 18px 18px}
+.t-navy .ph{position:absolute;inset:0;border-radius:240px 240px 18px 18px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);background:#ccc}
+.t-navy .shade{position:absolute;inset:0;border-radius:240px 240px 18px 18px;background:linear-gradient(180deg,transparent 65%,rgba(6,17,43,.55))}
+.t-navy .badge{position:absolute;right:-42px;bottom:70px;width:190px;height:190px;border-radius:50%;background:var(--sun);color:var(--navy);
+  display:grid;place-items:center;box-shadow:0 14px 30px rgba(0,0,0,.35);transform:rotate(10deg)}
+.t-navy .badge svg{position:absolute;inset:0}
+.t-navy .tick{font-family:'DM Serif Display',serif;font-weight:400;font-style:italic;font-size:44px;line-height:.95;text-align:center}
+.t-navy .who{position:absolute;left:70px;right:70px;top:930px}
+.t-navy .label{font-weight:700;font-size:20px;letter-spacing:6px;color:var(--sun);text-transform:uppercase}
+.t-navy .name{font-family:'DM Serif Display',serif;font-weight:400;font-size:96px;line-height:1.05;margin-top:12px;white-space:nowrap;overflow:hidden}
+.t-navy .line{font-family:'DM Serif Display',serif;font-weight:400;font-style:italic;font-size:44px;color:rgba(246,243,234,.85);margin-top:10px}
+.t-navy .bottom{position:absolute;left:70px;right:70px;bottom:62px;display:flex;border-top:1px solid rgba(246,243,234,.2);padding-top:30px}
+.t-navy .bottom div{flex:1}
+.t-navy .bottom div+div{border-left:1px solid rgba(246,243,234,.2);padding-left:30px}
+.t-navy .bottom small{display:block;font-weight:700;font-size:16px;letter-spacing:4px;color:rgba(246,243,234,.55);text-transform:uppercase}
+.t-navy .bottom strong{display:block;margin-top:8px;font-weight:800;font-size:30px;letter-spacing:1px}
+.t-navy .bottom strong em{font-style:normal;color:var(--sun)}
